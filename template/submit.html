@@ -1,16 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}    <!-- Extension of base.html template -->
 
-{% block title %}
-Submit Message
-{% endblock %}
+{% block title %}            <!-- Override the title block -->
+Submit Message               <!-- Title for this page -->
+{% endblock %} 
 
-{% block content %}
+{% block content %}          <!-- Override the content block -->
 <h1>Submit a Message</h1>
-<form method="post" action="/submit">
-    <label for="handle">Your Name:</label>
-    <input type="text" name="handle" id="handle"><br>
-    <label for="message">Your Message:</label>
-    <input type="text" name="message" id="message"><br>
-    <input type="submit" value="Submit">
+<form method="post" action="/submit">    <!-- Form for submitting a message, POST method to "/submit" route -->     
+    <label for="handle">Your Name:</label>               <!-- Label for the input field "handle" -->
+    <input type="text" name="handle" id="handle"><br>    <!-- Input field for entering the name -->
+    <label for="message">Your Message:</label>           <!-- Label for the input field "message" -->
+    <input type="text" name="message" id="message"><br>  <!-- Input field for entering the message -->
+    <input type="submit" value="Submit">                 <!-- Submit button -->
 </form>
 {% endblock %}
