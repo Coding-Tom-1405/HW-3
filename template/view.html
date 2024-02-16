@@ -1,14 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}                        <!-- Extend base.html template -->
 
-{% block title %}
-View Messages
+{% block title %}                                <!-- Override the title block -->
+View Messages                                    <!-- Title for this page -->
 {% endblock %}
-
-{% block content %}
+        
+{% block content %}                              <!-- Override the content block -->
 <h1>Some Cool Messages</h1>
 <ul>
-{% for message in messages %}
-    <li>{{ message[0] }}: {{ message[1] }}</li>
+{% for message in messages %}                    <!-- Loop through the messages -->
+    <li>{{ message[0] }}: {{ message[1] }}</li>  <!-- List item displaying each message -->
 {% endfor %}
 </ul>
 {% endblock %}
