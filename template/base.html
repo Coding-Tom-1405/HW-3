@@ -1,17 +1,21 @@
-<!doctype html>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!doctype html>   <!-- HTML document type declaration -->
+
+<!-- Link to a stylesheet (style.css) in the 'static' directory -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+
+<!-- Title of the webpage, with a block for inheritance -->
 <title>{% block title %}{% endblock %} - PIC16B Website</title>
-<nav>
-  <h1>A Simple Message Bank</h1>
-  <!-- <b>Navigation:</b> -->
-  <ul>
-    <li><a href="{{ url_for('submit') }}">Submit a Message</a></li>
-    <li><a href="{{ url_for('view') }}">View Messages</a></li>
+
+<nav>    <!-- Navigation section -->
+  <h1>A Simple Message Bank</h1> <!-- Heading -->
+  <ul>   <!-- Unordered list of navigation links -->
+    <li><a href="{{ url_for('submit') }}">Submit a Message</a></li>   <!-- Link to the 'submit' route -->
+    <li><a href="{{ url_for('view') }}">View Messages</a></li>        <!-- Link to the 'view' route -->
   </ul>
 </nav>
-<section class="content">
+<section class="content">    <!-- Content section -->
   <header>
-    {% block header %}{% endblock %}
+    {% block header %}{% endblock %}   <!-- Block for inheritance to allow overriding of header content -->
   </header>
   {% block content %}{% endblock %}
 </section>
